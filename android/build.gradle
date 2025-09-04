@@ -49,6 +49,12 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+
+    buildTypes {
+        profile {
+            minifyEnabled false
+        }
+    }
 }
 
 dependencies {
