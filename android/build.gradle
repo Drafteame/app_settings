@@ -18,7 +18,7 @@ buildscript {
     }
 }
 
-allprojects {
+rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
@@ -29,10 +29,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'com.spencerccf.app_settings'
     compileSdkVersion 36
 
-    namespace 'com.spencerccf.app_settings'
-    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -48,12 +47,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-    }
-
-    buildTypes {
-        profile {
-            minifyEnabled false
-        }
     }
 }
 
